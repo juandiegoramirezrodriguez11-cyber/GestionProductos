@@ -1,12 +1,56 @@
 package gestionproductos;
 
-public class Node<E> {
+public class Producto {
 
-    E data;
-    Node<E> next;
+    // Atributos
+    private String nombre;
+    private String tipo;
+    private String unidad;
+    private int cantidad;
 
-    public Node(E data) {
-        this.data = data;
-        this.next = null;
+    // Constructor
+    public Producto(String nombre, String tipo, String unidad, int cantidad) {
+        this.nombre = nombre;
+        this.tipo = tipo;
+        this.unidad = unidad;
+        this.cantidad = cantidad;
+    }
+
+    // Getters y Setters
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public String getUnidad() {
+        return unidad;
+    }
+
+    public void setUnidad(String unidad) {
+        this.unidad = unidad;
+    }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    @Override
+    public String toString() {
+        return nombre + " (" + cantidad + " " + unidad + ")";
     }
 }
